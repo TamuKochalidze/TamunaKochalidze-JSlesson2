@@ -22,14 +22,56 @@
 //ფუნქციის საშულებით გამოიტანეთ ყველა რიცხვის ჯამი:
 // 10, 50, 6, 7, 8, 11, 6, 3, 9
 
-function sum(...args) {
-        let numberSum = 0; 
+// function sum(...args) {
+//         let numberSum = 0; 
     
-        for (let item of args) {
-            numberSum = numberSum + item
-        }
-        console.log(numberSum);
-    }
-sum(10, 50, 6, 7, 8, 11, 6, 3, 9)
+//         for (let item of args) {
+//             numberSum = numberSum + item
+//         }
+//         console.log(numberSum);
+//     }
+// sum(10, 50, 6, 7, 8, 11, 6, 3, 9)
 
 //-----------------------------------------
+
+//number 3
+// შექმენით ფუნქცია სახელად printname რომელსაც პარამეტრად გადაეცემა ობიექტი. ობიექტს ექნება შემდეგი ფორმა:
+
+// let user = {
+//   firstname: 'giorgi',
+//   lastname: 'saakadze',
+//   age: 32,
+//   isloggedin: true
+// }
+
+// ფუნქციამ უნდა დააბრუნოს სახელი და გვარი ადგილის გამოტოვებით (მაგ: 'giorgi saakadze') თუ isloggedin არის true და false თუ isloggedin ფროფერთი არის false;
+
+
+function printname() {
+  let person = {
+      firstname: 'giorgi',
+      lastname: 'saakadze',
+      age: 32,
+      isloggedin: true
+      }
+
+      if (person.isloggedin === true) {
+          return 'giorgi saakadze';
+      }else{
+          return 'false';
+      }
+}
+
+let answer = printname();
+console.log(answer);
+
+//------------------------------------------------ 
+
+//number 4
+//შექმენით ფუნქცია რომელსაც გადაეცემა ერთი პარამეტრი. ეს პარამეტრი უნდა იყოს რიცხვების მასივი და ფუნქციამ უნდა დააბრუნოს ამ რიცხვებიდან მაქსიმალური:
+
+
+const array = [1, 5, 110, 133, 150, 67, 99, 999];
+
+console.log(Math.max(...array));
+
